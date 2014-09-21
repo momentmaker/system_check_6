@@ -37,4 +37,8 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+gem 'simple_form'
 
+group :development, :test do
+  gem 'pry-rails'
+end

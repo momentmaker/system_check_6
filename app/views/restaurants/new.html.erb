@@ -1,0 +1,14 @@
+<h1>Add A New Restaurant</h1>
+
+<%= simple_form_for @restaurant do |f| %>
+  <%= f.input :name, label: 'Name of the restaurant: ', input_html: { maxlength: 20 } %>
+  <%= f.input :address, label: 'Address: ', input_html: { maxlength: 20 } %>
+  <%= f.input :city, label: 'City: ', input_html: { maxlength: 20 } %>
+  <%= f.input :state, label: 'State: ', input_html: { maxlength: 20 } %>
+  <%= f.input :zipcode, label: 'Zipcode: ', input_html: { maxlength: 20 } %>
+  <%= f.input :description, as: 'text', label: 'What is the restaurant like? ' %>
+  <%= f.input :category, collection: ['American', 'Chinese', 'Thai', 'Japanese', 'Italian', 'Everything'] %>
+  <%= f.submit 'Submit' %>
+<% end %>
+
+<%= link_to '<= Back', :back %>

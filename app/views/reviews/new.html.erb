@@ -1,0 +1,9 @@
+<h1>Add A New Review</h1>
+
+<%= simple_form_for [@restaurant, @review] do |f| %>
+  <%= f.input :rating, collection: 1..5 %>
+  <%= f.input :body, as: 'text', label: 'Your review of this restaurant: ' %>
+  <%= f.submit 'Submit' %>
+<% end %>
+
+<%= link_to '<= Back', :back %>
